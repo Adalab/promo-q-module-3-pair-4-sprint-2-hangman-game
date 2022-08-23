@@ -1,4 +1,4 @@
-import "../styles/components/_dummy.scss";
+import "../styles/components/Dummy.scss";
 
 const Dummy = (props) => {
   const maxNumberOfErrors = 13;

@@ -1,4 +1,4 @@
-import "../styles/components/_letters.scss";
+import "../styles/components/Letters.scss";
 
 const SolutionLetters = (props) => {
   const renderSolutionLetters = () => {
