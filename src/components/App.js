@@ -6,8 +6,9 @@ import Dummy from "./Dummy";
 import SolutionLetters from "./SolutionLetters";
 import ErrorLetters from "./ErrorLetters";
 import Form from "./Form";
+import Footer from "./Footer";
 
-function App() {
+function App () {
   const [word, setWord] = useState("");
   const [userLetters, setUserLetters] = useState([]);
   const [lastLetter, setLastLetter] = useState("");
@@ -50,6 +51,7 @@ function App() {
           />{" "}
         </section>
         <Dummy numberOfErrors={getNumberOfErrors()} />
+        <Footer />
       </main>
     </div>
   );
