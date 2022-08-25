@@ -42,6 +42,13 @@ function App () {
     }
   };
 
+  const handleWord = value => {
+    setWord(value);
+    setUserLetters([]);
+    setLastLetter('');
+  };
+
+
   return (
     <div className="page">
       <Header />
