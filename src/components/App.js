@@ -7,6 +7,8 @@ import SolutionLetters from "./SolutionLetters";
 import ErrorLetters from "./ErrorLetters";
 import Form from "./Form";
 import Footer from "./Footer";
+import Instructions from "./Instructions";
+import Options from "./Options";
 //import { Route, Routes } from "react-router-dom";
 
 function App() {
