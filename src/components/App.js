@@ -9,9 +9,10 @@ import Form from "./Form";
 import Footer from "./Footer";
 import Instructions from "./Instructions";
 import Options from "./Options";
-//import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
+
+function App () {
   const [word, setWord] = useState("");
   const [userLetters, setUserLetters] = useState([]);
   const [lastLetter, setLastLetter] = useState("");
@@ -46,17 +47,26 @@ function App() {
       <Header />
       <main className="main">
         <section>
-          <SolutionLetters word={word} userLetters={userLetters} />
-          <ErrorLetters word={word} userLetters={userLetters} />
-          <Form
-            lastLetter={lastLetter}
-            handleLastLetter={handleLastLetter}
-          />{" "}
+          <Routes>
+            <Route path="/" element={<div><SolutionLetters word={word} userLetters={userLetters} />  <ErrorLetters word={word} userLetters={userLetters} />
+              <Form
+                lastLetter={lastLetter}
+                handleLastLetter={handleLastLetter}
+              /></div>} S />
+            <Route path="/instructions" element={<Instructions />} />
+            <Route path="/options" element={<Options />} />
+          </Routes>
+
+
+
+
+          {" "}
         </section>
         <Dummy numberOfErrors={getNumberOfErrors()} />
       </main>{" "}
       <Footer />
     </div>
+
   );
 }
 
